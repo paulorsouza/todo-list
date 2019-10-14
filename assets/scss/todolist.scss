@@ -1,0 +1,283 @@
+.task-create-form,
+.public-page,
+.task-item-view,
+.task-item-create-form,
+.favorite-page,
+.my-task-page,
+.user-profile-page {
+  .form-header {
+    margin-left: 25px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid black;
+    width: fit-content;
+    font-size: 2em;
+    font-weight: bold;
+  }
+}
+
+.task-create-form {
+  .form-subtitle {
+    margin-top: 45px;
+    text-align: center;
+    padding-bottom: 8px;
+  }
+
+  .input-box {
+    width: 300px;
+    margin: 0 auto 10px auto;
+    .input-label {
+      display: none;
+    }
+    .input {
+      margin-top: 4px; 
+      width: 300px;
+    }
+    .input-error {
+      padding: 8px 2px 8px 2px; 
+    }
+
+    &.has-error {
+      color: $strong-orange;
+    }
+  }
+
+  .page-error {
+    text-align: center;
+    color: $strong-orange;
+    margin-bottom: 12px;
+  }
+
+  .public-radio {
+    padding: 10px;
+    width: 150px;
+    margin: 0 auto 10px auto;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .btn-submit {
+    padding: 2px 15px 2px 15px;
+    position: absolute;
+    left: 50%;
+    margin-top: 2px;
+    margin-left: -45px;
+  }
+}
+
+.my-task-page,
+.favorite-page, 
+.public-page,
+.user-profile-page {
+  .my-task-page-container,
+  .favorite-page-container,
+  .public-page-container,
+  .user-profile-page-container {
+    margin-left: 25px;
+    margin-top: 35px;
+    display: grid;
+    grid-template-columns: 22% 22% 22% 22%;
+    grid-column-gap: 30px;
+    grid-row-gap: 22px;
+  
+    .task-card {
+      height: 160px;
+      padding: 5px 10px 4px 10px;
+      position: relative;
+      background-color: $grayish-blue; 
+
+      .title {
+        font-weight: $bold-weight;
+        padding-right: 26px;
+      }
+
+      .user-name {
+        cursor: pointer;
+      }
+
+      .user-name:hover {
+        text-decoration: underline;
+      }
+      
+      .far.fa-star,
+      .fas.fa-star {
+        position: absolute;
+        top: -25px;
+        right: -25px;
+      }
+
+      .footer {
+        position: absolute;
+        padding: 5px;
+        bottom: 0;
+        right: 0;
+        font-size: 12px;
+        text-align: right;
+      }
+    }
+  }
+}
+
+.my-task-page {
+  .btn-create {
+    padding: 2px 15px 2px 15px;
+    position: absolute;
+    left: 50%;
+    margin-top: 25px;
+    margin-left: -45px;
+  }
+  .my-task-page-container {
+    margin-top: 65px;
+  }
+}
+
+.task-item-view {
+  .task-items {
+    list-style-type: circle;
+    padding-bottom: 10px;
+    margin-left: 25px;
+  }
+}
+
+.task-item-create-form {
+  .task-items {
+    margin-left: 44px;
+  }
+}
+
+.task-item-view,
+.task-item-create-form {
+  .sub-header {
+    margin-left: 25px;
+    font-size: 0.83em;
+    font-weight: bold;
+    padding: 2px 0 20px 0;
+  }
+}
+
+.task-item-create-form {
+  .input-box {
+    width: 300px;
+    margin: 0 auto 10px auto;
+    .input-label {
+      display: none;
+    }
+    .input {
+      margin-top: 4px; 
+      width: 300px;
+    }
+    .input-error {
+      padding: 8px 2px 8px 2px; 
+    }
+
+    &.has-error {
+      color: $strong-orange;
+    }
+  }
+
+  .form-subtitle {
+    text-align: center;
+    padding-bottom: 8px;
+  }
+}
+
+.task-items {
+  margin-left: 25px;
+  overflow: auto;
+  height: 70vh;
+
+  .task-item {
+    padding: 2px 0 6px 0px;
+  }
+
+  .new-title-input {
+    width: 80%;
+    margin-top: 12px;
+    font-size: 14px;
+    height: 2.0em;
+  }
+
+  .title {
+    margin-left: 35px;
+    &.done {
+      text-decoration: line-through;
+    }
+  }
+
+  .container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+  }
+  
+  .container input {
+    position: absolute;
+    opacity: 0;
+    height: 0;
+    width: 0;
+    cursor: pointer;
+  }
+  
+  .checkmark {
+    position: absolute;
+    top: 11px;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: $light-grayish-blue;
+  }
+  
+  .container:hover input ~ .checkmark {
+    background-color: $very-light-gray;
+  }
+  
+  .container input:checked ~ .checkmark {
+    background-color: $grayish-blue;
+  }
+  
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  .container .checkmark:after {
+    right: -1px;
+    top: 2px;
+    width: 8px;
+    height: 14px;
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  .delete-item {
+    height: 2em;
+    width: 30px;
+    margin-left: 10px;
+  }
+}
+
+.btn-delete {
+  padding: 4px 15px 4px 15px;
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  margin-top: 10px;
+  margin-left: -45px;
+  background-color: $strong-orange;
+  color: $white;
+  border: 0px;
+}

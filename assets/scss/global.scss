@@ -1,0 +1,15 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: $normal-weight;
+}
+
+.page-wrapper {
+  height: 95vh;
+  overflow: hidden;
+}

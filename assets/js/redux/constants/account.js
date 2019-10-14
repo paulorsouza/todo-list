@@ -1,0 +1,10 @@
+export const SIGN_IN = 'account/SIGN_IN';
+export const SIGN_UP = 'account/SIGN_UP';
+export const ERRORS = 'account/ERRORS';
+export const FAVORITE = 'account/FAVORITE';
+export const UNFAVORITE = 'account/UNFAVORITE';
+export const MY_FAVORITES = 'account/MY_FAVORITES';
+export const MY_TASKS = 'account/MY_TASKS';
+export const LOAD = 'account/LOAD';
+export const UPDATE = 'account/UPDATE';
+export const LOAD_USER_PROFILE = 'account/LOAD_USER_PROFILE';

@@ -1,0 +1,13 @@
+<h1>Show Test</h1>
+
+<ul>
+
+  <li>
+    <strong>Integer:</strong>
+    <%= @test.integer %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.test_path(@conn, :edit, @test) %></span>
+<span><%= link "Back", to: Routes.test_path(@conn, :index) %></span>

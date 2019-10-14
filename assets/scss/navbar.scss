@@ -1,0 +1,31 @@
+.navbar {
+  height: 40px;
+  margin: 20px 25px 25px 20px;
+
+  .nav-items {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+  .nav-links {
+    font-weight: $bold-weight;
+    padding: 10px;
+  }
+  .nav-links:visited,
+  .nav-links:link {
+    color: $dark-blue;
+  }
+  .nav-links:active {
+    color: $vivid-blue
+  }
+
+  .nav-links.highlight {
+    color: black;
+  }
+
+  .back-icon {
+    position: absolute;
+    left: 25px;
+    top: 15px;
+  }
+}
